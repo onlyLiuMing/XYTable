@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="custom-table-Axis.js"></script>
+</head>
+<body>
+	<table id="table">
+		<thead></thead>
+		<tbody></tbody>
+		<tfoot></tfoot>
+	</table>
+</body>
+<script>
+	var string = '{"CT-ZZ-TST-311":{"http://info.3g.qq.com":"13.20 Mbps","http://i.ifeng.com":"220.13 Kbps","http://3g.163.com/touch":"143.92 Kbps","http://xw.qq.com":"242.06 Mbps","http://m.sohu.com":"400.63 Kbps","http://m.people.cn":"200.23 Kbps"},"CT-LZ-SJ1-311":{"http://info.3g.qq.com":"1.27 Mbps","http://i.ifeng.com":"61.57 Kbps","http://3g.163.com/touch":"122.11 Kbps","http://xw.qq.com":"2.36 Mbps","http://m.sohu.com":"45.40 Kbps","http://m.people.cn":"257.37 Kbps"},"CT-GD-NO1-311":{"http://xw.qq.com":"19.54 Mbps","http://3g.163.com/touch":"15.05 Mbps","http://m.people.cn":"1.55 Mbps","http://m.sohu.com":"103.94 Kbps","http://i.ifeng.com":"1.49 Mbps"},"CT-GD-NO1-312":{"http://xw.qq.com":"52.59 Mbps","http://m.sohu.com":"50.17 Kbps","http://m.people.cn":"1.29 Mbps","http://3g.163.com/touch":"15.43 Mbps","http://i.ifeng.com":"2.06 Mbps"},"CT-XA-DG1-311":{"http://xw.qq.com":"4.84 Mbps","http://info.3g.qq.com":"3.63 Mbps","http://3g.163.com/touch":"90.24 Kbps","http://m.sohu.com":"18.20 Kbps","http://i.ifeng.com":"8.13 Kbps"}}'
+	var datas = JSON.parse(string);
+	console.log(datas);
+	option = {
+		element:'#table',
+		datas:datas
+	}
+	XYTable(option);
+</script>
+</html>
