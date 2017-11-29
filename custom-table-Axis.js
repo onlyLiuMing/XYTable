@@ -4,18 +4,22 @@ function XYTable(option){
 	var _option = {
 		element: 'table',//需要修改的table元素选择器
 		datas:{},//传入的数据
-		lastTd_X:'',//x轴最后一个格中要插入的按钮或者自定义单元格
-		lastTd_Y:'',//y轴最后一个格中要插入的按钮或者自定义单元格
+		td:{
+			lastTd_X:'',//x轴最后一个格中要插入的按钮或者自定义单元格
+			lastTd_Y:''//y轴最后一个格中要插入的按钮或者自定义单元格
+		},
 		loading:function(){},//loading函数,最好是loading开关函数，会在执行前后各调用一次
 		callback:function(){}//回调函数
 	}
 	_option = Object.assign({},_option,option);
+
 	//loading效果
 	_option.loading();
-		//数据处理
-			var datas = _option.datas;
-			var _yAxis = [],//Array
-				_xAxis = Object.keys(datas),//Array
+
+	//数据处理
+	var datas = _option.datas;
+	var _yAxis = [],//Array
+	_xAxis = Object.keys(datas),//Array
 				_rowDatas = {},//Object
 				_xAxisLength = _xAxis.length,//Number
 				_yAxisLength = 0;
