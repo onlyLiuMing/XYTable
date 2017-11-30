@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<script src="jquery-3.2.1.min.js"></script>
-	<script src="custom-table-Axis.js"></script>
+	<script src="XYTable.js"></script>
 </head>
 <body>
 	<table id="table">
@@ -18,9 +18,16 @@
 	var datas = JSON.parse(string);
 	console.log(datas);
 	option = {
-		element:'#table',
-		datas:datas
+		datas:datas,
+		custom:{
+			customName_X:'asdf',
+			customTd_X:'<a >asdfas</a>',
+			customName_Y:'Y',
+			customTd_Y:'<a>asdf</a>'
+		}
 	}
-	XYTable(option);
+	// XYTable(option);
+
+	$('#table').XYTable(option)
 </script>
 </html>
